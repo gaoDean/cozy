@@ -55,7 +55,7 @@ function redoVideo(e) {
   }
 
   if (newVideoID) {
-    const newVideoURL = `https://www.youtube.com/embed/${newVideoID}?autoplay=1&rel=0&controls=0&showinfo=0&autohide=1&mute=1&loop=1&start=60`;
+    const newVideoURL = `https://www.youtube.com/embed/${newVideoID}?autoplay=1&rel=0&controls=0&showinfo=0&autohide=1&mute=1&loop=1&start=60&modestbranding=1`;
     youtubeVideo.src = newVideoURL;
   }
 
