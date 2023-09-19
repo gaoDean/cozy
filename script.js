@@ -12,16 +12,32 @@ function redoVideo(e) {
   // if input empty, return
   if (!userInput.value.trim()) {
     randomIDs = [
+      "-PeMpSLxB7s",
+      "6CeHK0BesGw",
+      "7-sP1qY87S8",
+      "9IS35LRHHrc",
+      "A_L8bfRZe88",
+      "BLiAN9nl3zQ",
+      "FI5o80Rddpc",
       "H_0_c6R_KKs",
+      "NJuSStkIZBg",
+      "PhJNptrpJEE",
+      "R5HJzlgdFjM",
+      "WFOrkngPRVI",
+      "YD0UhKiFk9g",
+      "ZXB15IUwz38",
       "c3suauAz0zQ",
+      "d27KWfA2T_k",
+      "dzjAoQ-UxAk",
+      "eX81ESpCyj4",
       "fS8dsAfjRss",
+      "hCMMdECxVok",
+      "u2cUo8uAX1k",
+      "vEJHuaU_aeM",
+      "w6LFgogdy_0",
+      "wQG8NFrH4vU",
       "xocnshwEbrM",
       "ywm4IDZfbfg",
-      "YD0UhKiFk9g",
-      "-PeMpSLxB7s",
-      "wQG8NFrH4vU",
-      "hCMMdECxVok",
-      "7-sP1qY87S8",
     ];
 
     newVideoID = randomIDs[Math.floor(Math.random() * randomIDs.length)];
@@ -39,7 +55,7 @@ function redoVideo(e) {
   }
 
   if (newVideoID) {
-    const newVideoURL = `https://www.youtube.com/embed/${newVideoID}?autoplay=1&rel=0&controls=0&showinfo=0&autohide=1&mute=1&loop=1`;
+    const newVideoURL = `https://www.youtube.com/embed/${newVideoID}?autoplay=1&rel=0&controls=0&showinfo=0&autohide=1&mute=1&loop=1&start=60`;
     youtubeVideo.src = newVideoURL;
   }
 
