@@ -2,19 +2,26 @@ const inputForm = document.getElementById("input-form");
 const userInput = document.getElementById("user-input");
 const youtubeVideo = document.getElementById("youtube-video");
 
-function redoVideo(e, newVideoID) {
+function redoVideo(e) {
   if (e) {
     e.preventDefault();
   }
 
+  let newVideoID;
+
   // if input empty, return
-  if (!newVideoID && !userInput.value.trim()) {
+  if (!userInput.value.trim()) {
     randomIDs = [
       "H_0_c6R_KKs",
       "c3suauAz0zQ",
-      "NJuSStkIZBg",
       "fS8dsAfjRss",
-      "i43tkaTXtwI",
+      "xocnshwEbrM",
+      "ywm4IDZfbfg",
+      "YD0UhKiFk9g",
+      "-PeMpSLxB7s",
+      "wQG8NFrH4vU",
+      "hCMMdECxVok",
+      "7-sP1qY87S8",
     ];
 
     newVideoID = randomIDs[Math.floor(Math.random() * randomIDs.length)];
@@ -37,8 +44,9 @@ function redoVideo(e, newVideoID) {
   }
 
   userInput.value = "";
+  userInput.placeholder = newVideoID;
 }
 
 inputForm.addEventListener("submit", redoVideo);
 
-redoVideo(null, "fS8dsAfjRss");
+redoVideo();
