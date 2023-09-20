@@ -2,6 +2,8 @@ const inputForm = document.getElementById("input-form");
 const userInput = document.getElementById("user-input");
 const youtubeVideo = document.getElementById("youtube-video");
 
+let timeoutsRunning = 0;
+
 function redoVideo(e) {
   if (e) {
     e.preventDefault();
@@ -13,6 +15,8 @@ function redoVideo(e) {
   if (!userInput.value.trim()) {
     randomIDs = [
       "-PeMpSLxB7s",
+      "0dN2BZjVUpY",
+      "5wRWniH7rt8",
       "6CeHK0BesGw",
       "7-sP1qY87S8",
       "9IS35LRHHrc",
@@ -32,10 +36,14 @@ function redoVideo(e) {
       "eX81ESpCyj4",
       "fS8dsAfjRss",
       "hCMMdECxVok",
+      "hZBEkSZEN8Y",
+      "lf6refTxQs8",
+      "rwionZbOryo",
       "u2cUo8uAX1k",
       "vEJHuaU_aeM",
       "w6LFgogdy_0",
       "wQG8NFrH4vU",
+      "wePMdTNW3C4",
       "xocnshwEbrM",
       "ywm4IDZfbfg",
     ];
@@ -55,12 +63,33 @@ function redoVideo(e) {
   }
 
   if (newVideoID) {
-    const newVideoURL = `https://www.youtube.com/embed/${newVideoID}?autoplay=1&rel=0&controls=0&showinfo=0&autohide=1&mute=1&loop=1&start=60&modestbranding=1`;
+    const newVideoURL = `https://www.youtube.com/embed/${newVideoID}?autoplay=1&rel=0&controls=0&showinfo=0&autohide=1&mute=1&loop=1&start=60&modestbranding=1&iv_load_policy=3`;
     youtubeVideo.src = newVideoURL;
   }
 
   userInput.value = "";
   userInput.placeholder = newVideoID;
+
+  // // create a black bar that covers the video title for 1 second
+  const blackBar = document.getElementById("black-bar");
+  const bottomBar = document.getElementById("bottom-bar");
+
+  blackBar.style.opacity = 1;
+  bottomBar.style.opacity = 1;
+
+  timeoutsRunning++;
+
+  setTimeout(() => {
+    timeoutsRunning--;
+
+    if (timeoutsRunning > 0) {
+      return;
+    }
+
+    // fade out the black bar
+    blackBar.style.opacity = 0;
+    bottomBar.style.opacity = 0;
+  }, 6000);
 }
 
 inputForm.addEventListener("submit", redoVideo);

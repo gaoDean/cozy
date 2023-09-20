@@ -32,14 +32,41 @@ img {
   height: 100%;
 }
 
+.black-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.5%;
+  background: rgba(0, 0, 0, 1);
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.colon {
+  padding-left: 5rem;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  background: rgba(0, 0, 0, 1);
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
 .content {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  /* Add your content styling here */
+  z-index: 2;
 }
 
 .input-container {
