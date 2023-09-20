@@ -44,10 +44,6 @@ img {
   transition: opacity 1s;
 }
 
-.colon {
-  padding-left: 5rem;
-}
-
 .bottom-bar {
   position: fixed;
   bottom: 0;
