@@ -64,8 +64,8 @@ function hideTitle() {
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.PLAYING) {
     timer = setTimeout(() => {
-      blackBar.style.transition = "opacity 2s";
-      bottomBar.style.transition = "opacity 2s";
+      blackBar.style.transition = "opacity 1s";
+      bottomBar.style.transition = "opacity 1s";
       blackBar.style.opacity = 0;
       bottomBar.style.opacity = 0;
     }, 2800);
@@ -73,8 +73,9 @@ function onPlayerStateChange(event) {
 }
 
 function onYouTubeIframeAPIReady() {
+  const currentVideoID = randomIDs[Math.floor(Math.random() * randomIDs.length)];
   player = new YT.Player('player', {
-    videoId: randomIDs[Math.floor(Math.random() * randomIDs.length)],
+    videoId: currentVideoID,
     playerVars: {
       'autoplay': 1,
       'rel': 0,
@@ -93,6 +94,7 @@ function onYouTubeIframeAPIReady() {
     }
   });
   hideTitle();
+  userInput.placeholder = currentVideoID;
 }
 
 function playVideo(id) {
@@ -102,6 +104,7 @@ function playVideo(id) {
   });
   hideTitle();
   clearTimeout(timer);
+  userInput.placeholder = id;
 }
 
 function redoVideo(e) {
@@ -133,9 +136,9 @@ function redoVideo(e) {
   }
 
   userInput.value = "";
-  userInput.placeholder = newVideoID;
 }
 
 inputForm.addEventListener("submit", redoVideo);
 
-redoVideo();
+// notes is an iframe
+const notes = document.getElementById("notes");
