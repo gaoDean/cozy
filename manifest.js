@@ -359,8 +359,8 @@ parcelRequire = (function (e, r, t, n) {
                         document.removeEventListener("touchend", y, { passive: !1, useCapture: !1 });
                 }
                 function G() {
-                    const e = document.querySelector("body");
-                    "light" === r ? (e.classList.add("dark"), (r = "dark"), (0, t.setLocalStorageItem)("manifest_theme", "dark")) : (e.classList.remove("dark"), (r = "light"), (0, t.setLocalStorageItem)("manifest_theme", "light")), C();
+                    // const e = document.querySelector("body");
+                    // "light" === r ? (e.classList.add("dark"), (r = "dark"), (0, t.setLocalStorageItem)("manifest_theme", "dark")) : (e.classList.remove("dark"), (r = "light"), (0, t.setLocalStorageItem)("manifest_theme", "light")), C();
                 }
                 function S() {
                     const e = document.querySelector("body"),
