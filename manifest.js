@@ -406,12 +406,12 @@ parcelRequire = (function (e, r, t, n) {
                             const t = l(e, s[e].text, s[e].position, s[e].size);
                             i.appendChild(t);
                         }
-                    else {
-                        const s = l(e.DEFAULT_MEMO.id, e.DEFAULT_MEMO.text, e.DEFAULT_MEMO.position, e.DEFAULT_MEMO.size);
-                        i.appendChild(s);
-                        const o = {};
-                        (o[e.DEFAULT_MEMO.id] = { text: e.DEFAULT_MEMO.text, position: e.DEFAULT_MEMO.position, size: e.DEFAULT_MEMO.size }), (0, t.setLocalStorageItem)("manifest_memos", o);
-                    }
+                    // else {
+                    //     const s = l(e.DEFAULT_MEMO.id, e.DEFAULT_MEMO.text, e.DEFAULT_MEMO.position, e.DEFAULT_MEMO.size);
+                    //     i.appendChild(s);
+                    //     const o = {};
+                    //     (o[e.DEFAULT_MEMO.id] = { text: e.DEFAULT_MEMO.text, position: e.DEFAULT_MEMO.position, size: e.DEFAULT_MEMO.size }), (0, t.setLocalStorageItem)("manifest_memos", o);
+                    // }
                     C();
                 }
                 window.addEventListener("resize", C), window.addEventListener("load", x), window.addEventListener("keydown", _);
